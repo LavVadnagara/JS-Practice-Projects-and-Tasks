@@ -5,7 +5,7 @@ const generateRandomString = () => {
 
     const stringSize = parseInt(document.getElementById('size').value);
 
-    if(stringSize > 0) {
+    if(stringSize > 0 ) {
         const stringCharacters = ' 0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz'
 
         const size = stringCharacters.length
@@ -15,6 +15,8 @@ const generateRandomString = () => {
             randomString += stringCharacters[Math.floor(Math.random() * size)]
         }
         return randomString;
+    } else if(stringSize == undefined) {
+        alert('Please enter a valid positive integer for string size.')
     } else {
         alert('Please enter a valid positive integer for string size.')
     }
