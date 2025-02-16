@@ -42,4 +42,4 @@ async function displayData() {
     // }
 }
 
-displayData();
+document.getElementById('getDataBtn').addEventListener('click', displayData);
